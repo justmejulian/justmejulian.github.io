@@ -3,26 +3,37 @@
   "description": "My own little page using gatsby",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Julian Visser <julian.g.visser@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.0.116",
+    "gatsby-image": "^2.0.29",
+    "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-offline": "^2.0.22",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-transformer-sharp": "^2.1.13",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-helmet": "^5.2.0",
+    "gh-pages": "^2.0.1",
+    "gatsby-plugin-sass": "^2.0.8",
+    "node-sass": "^4.11.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public"
   },
-  "dependencies": {
-    "gatsby": "^2.0.104",
-    "gatsby-plugin-sass": "^2.0.8",
-    "node-sass": "^4.11.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/justmejulian/justmejulian.github.io"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
   }
 }

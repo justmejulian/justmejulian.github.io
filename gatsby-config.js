@@ -1,12 +1,20 @@
 module.exports = {
   siteMetadata: {
     author: `Julian Visser`,
-    title: 'justmejulian.github.io',
+    title: 'Julian Visser',
     siteUrl: `https://www.justmejulian.github.io`,
     description: `My own little page`
   },
   plugins: [
     `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto', 'Roboto Mono']
+        }
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -15,6 +23,15 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/blog`
+      }
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

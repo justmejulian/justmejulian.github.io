@@ -6,7 +6,6 @@ import BlogHeader from '../components/BlogHeader/BlogHeader';
 
 const BlogPage = ({ data }) => (
   <Layout>
-    {console.log(data)}
     <BlogHeader />
     <h1>Blog</h1>
     {data.allMarkdownRemark.edges.map(post => (

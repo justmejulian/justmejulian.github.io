@@ -21,7 +21,6 @@ const LandingHeader = ({ data }) => (
     `}
     render={data => (
       <div id="header">
-        {console.log(data)}
         <div id="headerLeft">
           <div id="headerTitleContainer">
             <h1>

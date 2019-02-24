@@ -15,7 +15,6 @@ export default function BlogPostTemplate({ data }) {
       <BlogHeader />
 
       <main>
-        <Link to="/">go back</Link>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </main>

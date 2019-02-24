@@ -7,13 +7,15 @@ import BlogHeader from '../components/BlogHeader/BlogHeader';
 const BlogPage = ({ data }) => (
   <Layout>
     <BlogHeader />
-    <h1>Blog</h1>
-    {data.allMarkdownRemark.edges.map(post => (
-      <div key={post.node.id}>
-        <h2>{post.node.frontmatter.title}</h2>
-        <Link to={post.node.frontmatter.path}>Read More</Link>
-      </div>
-    ))}
+    <div id="main">
+      <h1>Blog</h1>
+      {data.allMarkdownRemark.edges.map(post => (
+        <div key={post.node.id}>
+          <h2>{post.node.frontmatter.title}</h2>
+          <Link to={post.node.frontmatter.path}>Read More</Link>
+        </div>
+      ))}
+    </div>
   </Layout>
 );
 

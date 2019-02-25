@@ -1,3 +1,5 @@
+import SmoothScroll from 'smooth-scroll';
+
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
@@ -9,23 +11,25 @@ import SEO from '../components/seo';
 
 import '../style/index.sass';
 
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 800
+});
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
     <div id="backButton">
-      <Link id="backButtonContent" to="/">
+      <a href="#header" id="backButtonContent">
         <ArrowSVG />
         <ArrowSVG />
         <p>Top</p>
-      </Link>
+      </a>
     </div>
 
     <div id="header">
       <div id="titles">
-        <h1>
-          <Link to="/">Julian Visser</Link>
-        </h1>
+        <h1>Julian Visser</h1>
         <h4>Computer Scientist</h4>
       </div>
       <ArrowButton next="about" />

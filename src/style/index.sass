@@ -1,0 +1,58 @@
+@import './vars'
+
+#backButton
+  position: fixed
+  right: $spacing-normal
+  bottom: $spacing-small
+
+  a:hover
+    svg
+      fill: $secondary-color
+
+  #backButtonContent
+    display: flex
+    flex-direction: column
+    text-transform: uppercase
+
+  svg
+    height: 20px
+    transform: rotate(180deg)
+
+
+#header
+  display: flex
+  justify-content: space-around
+  flex-direction: column
+  #titles
+    a:hover
+      color: $text-color
+
+  p
+    margin: 0px
+
+
+#about
+  height: 100vh
+  display: flex
+  justify-content: space-around
+  flex-direction: column
+
+  h2
+    grid-column-start: 1
+    grid-column-end: 3
+
+#portfolio
+  height: 100vh
+  display: flex
+  justify-content: center
+  flex-direction: column
+  h2
+    margin-bottom: 2*$spacing-normal
+  .projects
+    display: flex
+    justify-content: space-around
+
+    .project
+      height: 100px
+      width: 100px
+      background-color: pink

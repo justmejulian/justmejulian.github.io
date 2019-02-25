@@ -5,18 +5,18 @@ import './Nav.sass';
 
 const Nav = () => (
   <div id="nav">
-    <Link to="/" className="item">
-      Home
-    </Link>
-    <Link to="/about" className="item item-with-border">
-      About
-    </Link>
-    <Link to="/contact" className="item item-with-border">
-      Contact
-    </Link>
-    <Link to="/blog" className="item item-with-border item-last">
-      Blog
-    </Link>
+    <div id="name">
+      <Link to="/">Julian Visser</Link>
+    </div>
+
+    <div id="links">
+      <Link to="/#about" className="item">
+        About
+      </Link>
+      <Link to="/blog" className="item item-with-border">
+        Blog
+      </Link>
+    </div>
   </div>
 );
 export default Nav;

@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 
 import Layout from '../Layout/Layout';
 import Nav from '../../components/Nav/Nav';
-import BlogHeader from '../../components/BlogHeader/BlogHeader';
 
 import './BlogPost.sass';
 
@@ -12,12 +11,9 @@ export default function BlogPostTemplate({ data }) {
 
   return (
     <Layout>
-      <BlogHeader />
-
-      <main>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </main>
+      <h2>{post.frontmatter.title}</h2>
+      <p className="date">Published: {post.frontmatter.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   );
 }

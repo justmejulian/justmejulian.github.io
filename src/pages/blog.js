@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../layouts/Layout/Layout';
-import BlogHeader from '../components/BlogHeader/BlogHeader';
+
+import '../style/blog.sass';
 
 const BlogPage = ({ data }) => (
   <Layout>
-    <BlogHeader />
-    <div id="main">
-      <h1>Blog</h1>
+    <h2>Blog</h2>
+    <div id="posts">
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
-          <h2>{post.node.frontmatter.title}</h2>
+          <h3>{post.node.frontmatter.title}</h3>
           <Link to={post.node.frontmatter.path}>Read More</Link>
         </div>
       ))}

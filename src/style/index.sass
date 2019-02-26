@@ -20,11 +20,15 @@
     height: 20px
     transform: rotate(180deg)
 
+.container
+  height: 100vh
+  min-height: 800px
+  display: flex
+  flex-direction: column
 
 #header
-  display: flex
   justify-content: space-around
-  flex-direction: column
+
   #titles
     a:hover
       color: $text-color
@@ -38,10 +42,7 @@
 
 
 #about
-  height: 100vh
-  display: flex
   justify-content: space-around
-  flex-direction: column
   .content
     h2
       margin-bottom: 2*$spacing-normal
@@ -49,10 +50,8 @@
       border-bottom: $stroke
 
 #portfolio
-  height: 90vh
-  display: flex
   justify-content: center
-  flex-direction: column
+
   #portfolioDescription
     margin-bottom: 2*$spacing-normal
   .projects

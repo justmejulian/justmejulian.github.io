@@ -1,8 +1,15 @@
-import SmoothScroll from 'smooth-scroll';
-
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
+
+let SmoothScroll;
+
+if (typeof window !== 'undefined') {
+  SmoothScroll = require('smooth-scroll');
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800
+  });
+}
 
 import Layout from '../layouts/Layout/Layout';
 import ArrowButton from '../components/ArrowButton/ArrowButton';
@@ -13,10 +20,6 @@ import LinkedinSVG from '../components/LinkedinSVG/LinkedinSVG';
 import SEO from '../components/seo';
 
 import '../style/index.sass';
-
-var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 800
-});
 
 const IndexPage = () => (
   <Layout>

@@ -23,7 +23,10 @@ import '../style/index.sass';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[`justmejulian`, `portfolio`, `gatsby`, `application`, `react`]}
+    />
 
     <div id="backButton">
       <a href="#header" id="backButtonContent">

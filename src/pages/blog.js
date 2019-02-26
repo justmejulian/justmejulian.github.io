@@ -12,7 +12,10 @@ const BlogPage = ({ data }) => (
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
           <h3>{post.node.frontmatter.title}</h3>
-          <Link to={post.node.frontmatter.path}>Read More</Link>
+          <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+          <Link id="more" to={post.node.frontmatter.path}>
+            Read More
+          </Link>
         </div>
       ))}
     </div>
@@ -24,6 +27,7 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       edges {
         node {
+          excerpt
           id
           frontmatter {
             path

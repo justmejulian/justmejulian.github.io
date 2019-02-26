@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 const ArrowSVG = () => (
   <svg version="1.1" viewBox="0 0 129 129">

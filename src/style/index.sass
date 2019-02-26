@@ -4,6 +4,7 @@
   position: fixed
   right: $spacing-normal
   bottom: $spacing-small
+  font-size: 15px
 
   a:hover
     svg
@@ -15,6 +16,7 @@
     text-transform: uppercase
 
   svg
+    fill: $text-color
     height: 20px
     transform: rotate(180deg)
 
@@ -26,6 +28,10 @@
   #titles
     a:hover
       color: $text-color
+    svg
+      fill: $text-color
+      padding: $spacing-small
+      height: 25px
 
   p
     margin: 0px
@@ -36,23 +42,53 @@
   display: flex
   justify-content: space-around
   flex-direction: column
-
-  h2
-    grid-column-start: 1
-    grid-column-end: 3
+  .content
+    h2
+      margin-bottom: 2*$spacing-normal
+    a
+      border-bottom: $stroke
 
 #portfolio
-  height: 100vh
+  height: 90vh
   display: flex
   justify-content: center
   flex-direction: column
-  h2
+  #portfolioDescription
     margin-bottom: 2*$spacing-normal
   .projects
     display: flex
-    justify-content: space-around
+    justify-content: center
 
     .project
-      height: 100px
-      width: 100px
-      background-color: pink
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: 200px
+      width: 200px
+      padding: $spacing-small $spacing-normal
+      svg
+        margin: $spacing-small
+        align-self: center
+        width: 40px
+      img
+        margin: $spacing-small
+        align-self: center
+        width: 40px
+      p
+        margin: 0px
+        text-align: center
+        font-size: 15px
+
+    .project-with-border
+      border-right: $stroke
+
+@media (max-width: 818px)
+  main
+    #portfolio
+      .projects
+        align-self: center
+        flex-direction: column
+
+        .project-with-border
+          border-right: none
+          border-bottom: $stroke

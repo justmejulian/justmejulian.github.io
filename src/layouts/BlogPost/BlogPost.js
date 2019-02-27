@@ -23,7 +23,7 @@ export default function BlogPostTemplate({ data }) {
     <Layout>
       <h2>{post.frontmatter.title}</h2>
       <p className="date">Published: {post.frontmatter.date}</p>
-      {renderAst(post.htmlAst)}
+      <div id="BlogPostContent">{renderAst(post.htmlAst)}</div>
     </Layout>
   );
 }

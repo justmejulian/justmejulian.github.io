@@ -12,7 +12,11 @@ const BlogPage = ({ data }) => (
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
           <h3>{post.node.frontmatter.title}</h3>
-          <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: post.node.frontmatter.description || post.node.excerpt
+            }}
+          />
           <Link id="more" to={post.node.frontmatter.path}>
             Read More
           </Link>
@@ -24,7 +28,7 @@ const BlogPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt
@@ -33,6 +37,7 @@ export const pageQuery = graphql`
             path
             title
             date
+            description
           }
         }
       }

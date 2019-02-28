@@ -1,12 +1,12 @@
 ---
 path: '/why'
 title: A Blog?
-description: 'Why did I build a blog'
-date: '25.02.2019'
+description: 'Why did I build a blog?'
+date: '05.02.2019'
 ---
 
-This is my first post on my new fake blog! How exciting!
+I came across [GatsbyJS](!https://www.gatsbyjs.org/) and found it intriguing. So I gave it a try. I have been wanting to learn more about [GraphQL](!https://graphql.org/) for a while now. What better way to do so than to build a project with it? And that's it. That's why I built this blog with a combination of [ReacJS](https://reactjs.org/), [GatsbyJS](!https://www.gatsbyjs.org/) and [GraphQL](!https://graphql.org/).
 
-I'm sure I'll write a lot more interesting things in the future.
+I am planning to use it to write about things that I am doing that might be of interest to or maybe could help someone else.
 
-Like this one about why I made this blog.
+Be sure to checkout my [GitHub](!https://github.com/justmejulian) to see what I am up to.

@@ -10,7 +10,7 @@ const BlogPage = ({ data }) => (
     <h2>Blog</h2>
     <div id="posts">
       {data.allMarkdownRemark.edges.map(post => (
-        <div key={post.node.id}>
+        <div className="post" key={post.node.id}>
           <h3>{post.node.frontmatter.title}</h3>
           <p
             dangerouslySetInnerHTML={{

@@ -7,6 +7,8 @@ Yeah I know. React is an overkill. But more will come.
 
 ## Building and running on localhost
 
+Built using [vitejs](https://vitejs.dev).
+
 First install dependencies:
 
 ```sh

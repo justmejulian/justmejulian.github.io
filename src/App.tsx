@@ -1,45 +1,52 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import * as React from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import GithubSVG from "./components/GithubSVG/GithubSVG";
+import LinkedinSVG from "./components/LinkedinSVG/LinkedinSVG";
 
+import styles from "./App.module.css";
+
+type AppProps = {};
+
+function App(props: AppProps) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
+    <div className={styles.layout}>
+      <div className={styles.container}>
+        <h1>Julian Visser</h1>
+        <h2>Computer Scientist</h2>
+        <div className={styles.iconContainer}>
+          <a className={styles.icon} href="https://github.com/justmejulian">
+            <GithubSVG />
           </a>
-          {' | '}
           <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
+            className={styles.icon}
+            href="https://www.linkedin.com/in/julian-visser-8b4b21180/"
           >
-            Vite Docs
+            <LinkedinSVG />
           </a>
-        </p>
-      </header>
+        </div>
+        <div>
+          <p>
+            Hi my name is Julian. I am a <b>Full Stack Software Engineer</b>. I
+            am always trying and learning new things in and outside the office.
+            I have a love for design and an intrinsic need to know how things
+            work. That is why I recently started my
+            <b> Masters in Computer Science </b>
+            at the
+            <b> ZHAW School of Engineering.</b>
+          </p>
+          <p>
+            If you want to know more about me check out my{" "}
+            <b>
+              <a href="https://github.com/justmejulian/resume/blob/master/resume/resume.pdf">
+                CV
+              </a>
+            </b>
+            .
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

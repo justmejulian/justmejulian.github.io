@@ -26,13 +26,26 @@ function App(props: AppProps) {
         </div>
         <div>
           <p>
-            Hi my name is Julian. I am a <b>Full Stack Software Engineer</b>. I
-            am always trying and learning new things in and outside the office.
-            I have a love for design and an intrinsic need to know how things
-            work. That is why I recently started my
+            Hi my name is Julian.
+          </p>
+          <p>
+            I am a <b>Full Stack Software Engineer</b>.
+          </p>
+          <p>
+            Currently working 80% at <b>Energy Grupper Schweiz</b> in Zurich.
+            <br />
+            &
+            <br />
+            Finishing up my
             <b> Masters in Computer Science </b>
             at the
+            <br />
             <b> ZHAW School of Engineering.</b>
+          </p>
+          <p>
+            I have a love for design and an intrinsic need to know how things work
+            <br />
+            and I am always trying and learning new things in and outside the office.
           </p>
           <p>
             If you want to know more about me check out my{" "}

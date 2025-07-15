@@ -6,8 +6,7 @@ const allPosts = await getCollection('blog');
 ---
 
 <Layout>
-  <h1>Welcome!</h1>
-
+  <h1>This is my blog</h1>
   <h2>All Blog Posts</h2>
   <div class="posts">
     {allPosts.map((post) => <h3>{post.slug}</h3>)}

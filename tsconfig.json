@@ -1,32 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
+  "extends": "astro/tsconfigs/strict",
   "include": [
-    "src",
-    "declarations.d.ts"
+    ".astro/types.d.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.astro"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "baseUrl": ".",
+    "paths": {
+      "@layouts/*": ["./src/layouts/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@components/*": ["./src/components/*"],
+      "@preact/*": ["./src/components/preact/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@content/*": ["./src/content/*"],
+      "@images/*": ["./src/images/*"]
     }
-  ]
+  }
 }

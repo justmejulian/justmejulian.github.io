@@ -20,15 +20,25 @@ const title = 'justmejulian';
     <title>{title}</title>
   </head>
   <body>
-    <Nav title={title} />
-    <main>
-      <slot />
-    </main>
+    <div class="container">
+      <Nav title={title} />
+      <main>
+        <slot />
+      </main>
+    </div>
   </body>
 </html>
 
 <style>
   body {
     font-family: 'Fira Sans', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    padding: 16px;
+    width: 100%;
+    max-width: 800px;
   }
 </style>

@@ -13,7 +13,6 @@
     "baseUrl": ".",
     "paths": {
       "@layouts/*": ["./src/layouts/*"],
-      "@styles/*": ["./src/styles/*"],
       "@components/*": ["./src/components/*"],
       "@preact/*": ["./src/components/preact/*"],
       "@utils/*": ["./src/utils/*"],

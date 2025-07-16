@@ -1,5 +1,4 @@
 ---
-import '@styles/global.css';
 import '@fontsource/fira-sans';
 
 import Nav from '@components/Nav.astro';
@@ -11,7 +10,7 @@ const title = 'justmejulian';
 ---
 
 <!doctype html>
-<html lang="en" class="h-full">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -40,10 +39,51 @@ const title = 'justmejulian';
     display: flex;
     justify-content: center;
     margin: 0;
+
+    color: #212427;
+    background-color: #ffffff;
+
+    .container {
+      padding: 16px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h1 {
+      margin: 12px 0;
+    }
+
+    h2 {
+      margin: 8px 0;
+    }
+
+    h3 {
+      margin: 4px 0;
+    }
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: #212427;
+    }
+
+    a:visited {
+      color: #212427;
+    }
   }
-  .container {
-    padding: 16px;
-    width: 100%;
-    max-width: 800px;
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #ffffff;
+      background-color: #212427;
+
+      a {
+        color: #ffffff;
+      }
+
+      a:visited {
+        color: #ffffff;
+      }
+    }
   }
 </style>

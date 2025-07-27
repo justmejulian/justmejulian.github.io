@@ -1,0 +1,52 @@
+---
+export interface Props {
+  image: ImageMetadata;
+}
+const { image } = Astro.props;
+---
+
+<div class="container">
+  <div class="inner-container">
+    <img src={image.src} alt="Mockup Contents" />
+  </div>
+  <div class="stand"></div>
+</div>
+
+<style>
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inner-container {
+    position: relative;
+    border-radius: 4px;
+    border: 12px solid #313133;
+  }
+
+ .stand-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stand {
+    left: 50%;
+    right: 50%;
+    width: 60px;
+    height: 20px;
+    background-color: #313133;
+    border-radius: 4px;
+  }
+
+  img {
+    border-radius: 4px;
+    width: 100%;
+    contain: cover;
+    display: block;
+  }
+</style>

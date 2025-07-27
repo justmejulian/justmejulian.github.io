@@ -1,13 +1,118 @@
 ---
 import Layout from '@layouts/Layout.astro';
+
+import IphoneMock from '@components/IphoneMock.astro';
+import WatchMock from '@components/WatchMock.astro';
+import DesktopMock from '@components/DesktopMock.astro';
+
+import PhoneImage from '@images/tricorder-iphone.png';
+import WatchImage from '@images/tricorder-watch.png';
+import Workout4Wildlife from '@images/workout4wildlife.png';
+import EmberNvim from '@images/ember-nvim.png';
+import Poker from '@images/poker.png';
+
+import { Image } from 'astro:assets';
 ---
 
 <Layout>
   <h1>Hi! My name is Julian 👋</h1>
 
-  <p>I'm a software developer and this is my blog where I share where I share some stuff I learn.</p>
+  <p>
+    I'm a software developer and this is my blog where I share where I share
+    some stuff I learn.
+  </p>
 
-  <p>If you want to know more about me, you can have a look at my <a href="https://raw.githubusercontent.com/justmejulian/resume/1d9d8e6d13d79e51b073a7fa25fe99b341c6a55c/resume/resume.pdf">resume</a> or look me up on <a href="https://ch.linkedin.com/in/julian-visser-8b4b21180">LinkedIn</a>.</p>
+  <p>
+    If you want to know more about me, you can have a look at my <a
+      href="https://raw.githubusercontent.com/justmejulian/resume/1d9d8e6d13d79e51b073a7fa25fe99b341c6a55c/resume/resume.pdf"
+      >resume</a
+    > or look me up on <a
+      href="https://ch.linkedin.com/in/julian-visser-8b4b21180">LinkedIn</a
+    >.
+  </p>
 
-  <p>And if you want to know more about what tools I use, you can check out my <a href="https://github.com/justmejulian/.dotfiles">dotfiles</a> 🤓.</p>
+  <p>
+    And if you want to know more about what tools I use, you can check out my <a
+      href="https://github.com/justmejulian/.dotfiles">dotfiles</a
+    > 🤓.
+  </p>
+
+  <h2>Things I have built</h2>
+
+  <h3>Ember.nvim</h3>
+  <p>Tools to enhance development with Ember.js in Neovim.</p>
+  <p>
+    Have a look at the code on GitHub: <a
+      href="https://github.com/justmejulian/ember.nvim">ember.nvim</a
+    >.
+  </p>
+  <div class="images">
+    <img
+      class="ember-nvim"
+      src={EmberNvim.src}
+      alt="Ember.nvim Neovim plugin"
+    />
+  </div>
+
+  <h3>Open Planning Poker</h3>
+  <p>A web application for planning poker.</p>
+  <p>
+    Have a look at the code on GitHub: <a
+      href="https://github.com/justmejulian/open-planning-poker"
+      >open-planning-poker</a
+    >.
+  </p>
+  <div class="images">
+    <DesktopMock image={Poker} />
+  </div>
+
+  <h3>Tricorder</h3>
+  <p>A real-time motion tracking application designed for the Apple Watch.</p>
+  <p>
+    Have at it on GitHub: <a href="https://github.com/justmejulian/tricorder"
+      >tricorder</a
+    >.
+  </p>
+  <div class="images">
+    <IphoneMock image={PhoneImage} />
+    <WatchMock image={WatchImage} />
+  </div>
+
+  <h3>Workout4Wildlife</h3>
+  <p>
+    A web page for <a href="https://www.workout4wildlife.com/"
+      >Workout4Wildlife</a
+    >, a non-profit organization that raises funds for wildlife conservation
+    through fitness activities.
+  </p>
+  <p>
+    Have a look at the code on GitHub: <a
+      href="https://github.com/justmejulian/Workout4Wildlife"
+      >Workout4Wildlife</a
+    >.
+  </p>
+  <div class="images">
+    <DesktopMock image={Workout4Wildlife} />
+  </div>
 </Layout>
+
+<style>
+  h2 {
+    margin-top: 32px;
+  }
+  .images {
+    margin-top: 32px;
+    margin-bottom: 64px;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    .ember-nvim {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+</style>

@@ -1,8 +1,8 @@
 ---
-title: "First Post"
-description: "My first post"
+title: 'First Post'
+description: 'My first post'
 date: 2024-02-02
-tags: ["hello", "world"]
+tags: ['hello', 'world']
 ---
 
 # First Post

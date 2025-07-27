@@ -1,0 +1,50 @@
+---
+export interface Props {
+  image: ImageMetadata;
+}
+const { image } = Astro.props;
+---
+
+<div class="watch-container">
+    <div class="side-bar first-bar"></div>
+    <div class="inner-container">
+      <img src={image.src} alt="Tricorder Watch Mockup">
+    </div>
+</div>
+
+<style>
+.watch-container {
+  position: relative;
+  border: 5px solid #313233;
+  background-color: #313233;
+  border-radius: 20px;
+  height: 128px;
+  width: 108px;
+}
+
+.side-bar {
+  position: absolute;
+  width: 2px;
+  background-color: #313233;
+  border-radius: 4px;
+}
+
+.first-bar {
+  height: 20px;
+  right: -8px;
+  top: 20px;
+}
+
+.inner-container {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain
+}
+</style>

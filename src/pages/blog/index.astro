@@ -9,6 +9,21 @@ const allPosts = await getCollection('blog');
   <h1>This is my blog</h1>
   <h2>All Blog Posts</h2>
   <div class="posts">
-    {allPosts.map((post) => <h3>{post.slug}</h3>)}
+  {allPosts.map((post) => (
+    <div class="post">
+      <p>
+        <strong>{post.data.title}</strong>
+        -
+        {post.data.description}
+        -
+        <a href={`/blog/${post.slug}`}>Read more</a>
+      </p>
+    </div>
+  ))}
   </div>
 </Layout>
+
+<style>
+  .posts {
+  }
+</style>

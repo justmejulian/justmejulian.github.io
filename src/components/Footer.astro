@@ -1,0 +1,59 @@
+---
+import GithubLogo from '@components/GithubLogo.astro';
+---
+
+<footer>
+  <div class="left">
+    <p>&copy; {new Date().getFullYear()} Julian Visser</p>
+  </div>
+  <div class="center">
+    <p>Built with <a href="https://astro.build">Astro</a></p>
+  </div>
+  <div class="right">
+    <div class="github">
+      <a href="https://github.com/justmejulian/justmejulian.github.io">
+        <GithubLogo />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    padding-bottom: 16px;
+    font-size: 12px;
+
+    div {
+      flex: 1 1 0;
+      width: 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+
+      .github {
+        max-width: 16px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .center {
+        display: none;
+      }
+    }
+  }
+</style>

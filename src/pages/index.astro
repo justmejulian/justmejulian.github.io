@@ -5,25 +5,38 @@ import Memoji from '@images/memoji.png';
 
 <Layout>
   <h1>Hi! My name is Julian 👋</h1>
-  <p>
-    I'm a software developer and this is my blog where I share where I share
-    some stuff I learn.
-  </p>
-
-  <p>
-    If you want to know more about me, you can have a look at my <a
-      href="https://raw.githubusercontent.com/justmejulian/resume/1d9d8e6d13d79e51b073a7fa25fe99b341c6a55c/resume/resume.pdf"
-      >resume</a
-    > or look me up on <a
-      href="https://ch.linkedin.com/in/julian-visser-8b4b21180">LinkedIn</a
-    >.
-  </p>
-
-  <p>
-    And if you want to know more about what tools I use, you can check out my <a
-      href="https://github.com/justmejulian/.dotfiles">dotfiles</a
-    > 🤓.
-  </p>
+  <section>
+    <p>
+      I'm a software developer passionate about exploring and learning new
+      technologies.
+    </p>
+    <p>Welcome to my personal website.</p>
+    <br />
+    <p class="question">Want to know more about me?</p>
+    <p>
+      Check out my
+      <a
+        href="https://raw.githubusercontent.com/justmejulian/resume/1d9d8e6d13d79e51b073a7fa25fe99b341c6a55c/resume/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer">resume</a
+      > or connect with me on
+      <a
+        href="https://ch.linkedin.com/in/julian-visser-8b4b21180"
+        target="_blank"
+        rel="noopener noreferrer">LinkedIn</a
+      >.
+    </p>
+    <br />
+    <p class="question">Curious about my workflow?</p>
+    <p>
+      Take a peek at my
+      <a
+        href="https://github.com/justmejulian/.dotfiles"
+        target="_blank"
+        rel="noopener noreferrer">dotfiles</a
+      > 🤓.
+    </p>
+  </section>
 
   <div class="memoji">
     <img src={Memoji.src} alt="Julian's Memoji" />
@@ -40,5 +53,9 @@ import Memoji from '@images/memoji.png';
       width: 80%;
       max-width: 300px;
     }
+  }
+  .question {
+    font-weight: bold;
+    font-size: 18px;
   }
 </style>

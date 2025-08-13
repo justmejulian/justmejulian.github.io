@@ -1,6 +1,6 @@
 ---
 title: 'Hello World'
-description: 'My first post'
+description: 'My first post. Overview of why I wanted to start and what I will write about.'
 date: 2024-07-17
 tags: []
 ---
@@ -21,4 +21,4 @@ So I will try to write about things I learn and find useful. Maybe that will hel
 
 I have a couple notes in Obsidian that I can use as a starting point.
 
-Soo stay tuned...
+Let's see how this goes ...

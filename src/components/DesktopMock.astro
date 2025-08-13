@@ -1,6 +1,8 @@
 ---
 export interface Props {
-  image: ImageMetadata;
+  image: {
+    src: string;
+  };
 }
 const { image } = Astro.props;
 ---

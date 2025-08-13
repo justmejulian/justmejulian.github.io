@@ -6,24 +6,51 @@ const allPosts = await getCollection('blog');
 ---
 
 <Layout>
-  <h1>This is my blog</h1>
-  <h2>All Blog Posts</h2>
+  <h1>Blog</h1>
   <div class="posts">
-  {allPosts.map((post) => (
-    <div class="post">
-      <p>
-        <strong>{post.data.title}</strong>
-        -
-        {post.data.description}
-        -
-        <a href={`/blog/${post.slug}`}>Read more</a>
-      </p>
-    </div>
-  ))}
+    {
+      allPosts.map((post) => (
+        <div class="post">
+          <h2>{post.data.title}</h2>
+          <p class="date">{post.data.date.toLocaleDateString()}</p>
+          <p> {post.data.description} </p>
+          <a class="readMore" href={`/blog/${post.slug}`}>
+            Read more
+          </a>
+        </div>
+      ))
+    }
   </div>
 </Layout>
 
 <style>
+  .post:first-of-type {
+    border-top: 1px dashed;
+  }
   .posts {
+    margin-top: 16px;
+    border-bottom: 1px dashed;
+    padding-bottom: 16px;
+    border-color: #212427;
+  }
+  .date {
+    font-size: 12px;
+    color: #24272a;
+  }
+  .readMore {
+    font-size: 14px;
+    color: #24272a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .posts {
+      border-color: #ffffff;
+    }
+    .date {
+      color: #fcfcfc;
+    }
+    .readMore {
+      color: #fcfcfc;
+    }
   }
 </style>
